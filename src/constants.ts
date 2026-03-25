@@ -1,4 +1,4 @@
-import { 
+import type { 
   Player, 
   GameState, 
   Cell, 
@@ -6,7 +6,7 @@ import {
   AuctionState, 
   TradeOffer, 
   CasinoEvent 
-} from './types';
+} from './types.js';
 
 export const BOARD_CONFIG: Cell[] = [
   // TOP SIDE (0-10)

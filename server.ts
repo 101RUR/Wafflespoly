@@ -3,10 +3,10 @@ import { createServer } from "http";
 import { Server } from "socket.io";
 import path from "path";
 import { createServer as createViteServer } from "vite";
-import { GameState, Player, Property, Cell, TradeOffer } from "./src/types";
-import { BOARD_CONFIG, CHANCE_EVENTS, RENT_TABLES, FLEET_RENT } from "./src/constants";
+import type { GameState, Player, Property, Cell, TradeOffer } from "./src/types.js";
+import { BOARD_CONFIG, CHANCE_EVENTS, RENT_TABLES, FLEET_RENT } from "./src/constants.js";
 
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 async function startServer() {
   const app = express();
